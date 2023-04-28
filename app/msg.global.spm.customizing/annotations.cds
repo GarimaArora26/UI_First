@@ -1,0 +1,1 @@
+using srv.Cd_Cust_MapService as service from '../../srv/config-service';

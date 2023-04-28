@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
+        <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="srv.Cd_Cust_MapService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Cd_customizing" EntityType="srv.Cd_Cust_MapService.Cd_customizing"/>
+            </EntityContainer>
+            <EntityType Name="Cd_customizing">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="MappingType" Type="Edm.String" MaxLength="10"/>
+                <Property Name="BTPAttribute" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Source" Type="Edm.String" MaxLength="12"/>
+                <Property Name="Target" Type="Edm.String" MaxLength="12"/>
+                <Property Name="SourceDataType" Type="Edm.String" MaxLength="8"/>
+                <Property Name="CDObject" Type="Edm.String" MaxLength="12"/>
+                <Property Name="DataType" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Length" Type="Edm.Int32"/>
+                <Property Name="DataConvRequired" Type="Edm.String" MaxLength="5"/>
+                <Property Name="ShortDesc" Type="Edm.String" MaxLength="25"/>
+            </EntityType>
+            <Annotations Target="srv.Cd_Cust_MapService.EntityContainer/Cd_customizing">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
