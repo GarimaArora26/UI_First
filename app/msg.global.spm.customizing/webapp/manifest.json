@@ -15,9 +15,9 @@
             "version": "1.9.4",
             "toolsId": "c77dc1c8-ceb4-4964-93cd-afe883d8aa9c"
         },
-        "dataSources": {
+        "dataSources": {    
             "mainService": {
-                "uri": "/cd-cust-map/",
+                "uri": "/config/",
                 "type": "OData",
                 "settings": {
                     "annotations": [],

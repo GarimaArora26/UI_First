@@ -1,0 +1,7 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="project1.controller.View1" displayBlock="true" viewName="Tile1" fieldGroupIds="{/#Cd_customizing/BTPAttribute/@sap:label}">
+
+<StandardTile xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" title="cd_customizing" icon="sap-icon://customer" activeIcon="sap-icon://customer" number="1" numberUnit="Table" infoState="Success" id="tile0" cd:w5g.dt.context="/Cd_customizing" info="https://port4004-workspaces-ws-49gqn.us10.trial.applicationstudio.cloud.sap/msg.global.spm.customizing/webapp/index.html#Shell-home" fieldGroupIds="{BTPAttribute},{CDObject},{DataConvRequired}."/>
+
+<Button xmlns="sap.m" text="Button" id="button0"/><GenericTile header="Header" subheader="Sub Header" id="tile2"><tileContent><sap.suite.ui.commons:TileContent xmlns:sap.suite.ui.commons="sap.suite.ui.commons" id="content0"><sap.suite.ui.commons:content><Link xmlns="sap.m" href="https://port4004-workspaces-ws-49gqn.us10.trial.applicationstudio.cloud.sap/spm.bp.mapping/webapp/index.html" text="Link Text" id="link0"/></sap.suite.ui.commons:content></sap.suite.ui.commons:TileContent></tileContent></GenericTile><Link xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" href="https://port4004-workspaces-ws-49gqn.us10.trial.applicationstudio.cloud.sap/msg.global.spm.customizing/webapp/index.html#Shell-home" text="Customizing" id="link1" cd:w5g.dt.context="/Cd_customizing"/>
+
+</mvc:View>

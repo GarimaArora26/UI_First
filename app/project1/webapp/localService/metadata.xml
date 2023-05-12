@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="srv.Cd_Cust_MapService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Cd_customizing" EntityType="srv.Cd_Cust_MapService.Cd_customizing"/>
+            </EntityContainer>
+            <EntityType Name="Cd_customizing">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="MappingType" Type="Edm.String" MaxLength="10"/>
+                <Property Name="BTPAttribute" Type="Edm.String" MaxLength="15"/>
+                <Property Name="Source" Type="Edm.String" MaxLength="12"/>
+                <Property Name="Target" Type="Edm.String" MaxLength="12"/>
+                <Property Name="SourceDataType" Type="Edm.String" MaxLength="8"/>
+                <Property Name="CDObject" Type="Edm.String" MaxLength="12"/>
+                <Property Name="DataType" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Length" Type="Edm.Int32"/>
+                <Property Name="DataConvRequired" Type="Edm.String" MaxLength="5"/>
+                <Property Name="ShortDesc" Type="Edm.String" MaxLength="25"/>
+            </EntityType>
+            <Annotations Target="srv.Cd_Cust_MapService.Cd_customizing">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>id</PropertyPath>
+                        <PropertyPath>DataType</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="id"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DataType"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BTPAttribute"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Source"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Target"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SourceDataType"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CDObject"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Length"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DataConvRequired"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ShortDesc"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="srv.Cd_Cust_MapService.Cd_customizing/id">
+                <Annotation Term="Common.Label" String="ID"/>
+            </Annotations>
+            <Annotations Target="srv.Cd_Cust_MapService.Cd_customizing/BTPAttribute">
+                <Annotation Term="Common.Label" String="BTP Attribute"/>
+            </Annotations>
+            <Annotations Target="srv.Cd_Cust_MapService.Cd_customizing/Source">
+                <Annotation Term="Common.Label" String="Source"/>
+            </Annotations>
+            <Annotations Target="srv.Cd_Cust_MapService.Cd_customizing/Target">
+                <Annotation Term="Common.Label" String="Target"/>
+            </Annotations>
+            <Annotations Target="srv.Cd_Cust_MapService.Cd_customizing/SourceDataType">
+                <Annotation Term="Common.Label" String="SourceDataType"/>
+            </Annotations>
+            <Annotations Target="srv.Cd_Cust_MapService.Cd_customizing/CDObject">
+                <Annotation Term="Common.Label" String="CD Object"/>
+            </Annotations>
+            <Annotations Target="srv.Cd_Cust_MapService.Cd_customizing/DataType">
+                <Annotation Term="Common.Label" String="Data Type"/>
+            </Annotations>
+            <Annotations Target="srv.Cd_Cust_MapService.Cd_customizing/Length">
+                <Annotation Term="Common.Label" String="Length"/>
+            </Annotations>
+            <Annotations Target="srv.Cd_Cust_MapService.Cd_customizing/DataConvRequired">
+                <Annotation Term="Common.Label" String="Data Conv Required"/>
+            </Annotations>
+            <Annotations Target="srv.Cd_Cust_MapService.Cd_customizing/ShortDesc">
+                <Annotation Term="Common.Label" String="Short Desc"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

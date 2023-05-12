@@ -16,8 +16,8 @@ entity Cd_customizing {
 entity Cd_Local_Mapping {
  key id               : Integer;
       TenantId         : String(10);
-      CommissionEG     : String(10);
-      CommissionEC     : String(10);
+      CommissionEG     : String(30);
+      CommissionEC     : String(30);
       MainTransaction  : String(10);
       SubTransaction   : String(10);
       DocumentType     : String(5);
